@@ -32,8 +32,15 @@ jobs:
       - name: Install Dependncies
         run:  sudo npm install
         
+      # Runs a single command using the runners shell
+      - name: Install Jasmine-node
+        run:  sudo npm install jasmine-node -g
       
       # Runs a set of commands using the runners shell
       - name: Run colorCoder and Checker
         run: sudo npm run start
+        
+      # Runs a set of commands using the runners shell
+      - name: Run Specs
+        run: sudo npm run test
          
